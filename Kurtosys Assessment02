@@ -1,0 +1,63 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+public class Functional_UI_Test {
+
+       public static void main(String[] args) {
+
+
+              WebDriver driver = new FirefoxDriver();
+
+              String appUrl = "https://am.jpmorgan.com/gb/en/asset-management/gim/adv/home";
+
+
+              driver.get(appUrl);
+
+              driver.manage().window().maximize();
+
+
+              WebElement Click_Accept_the_disclaimer = driver.findElement(By.Xpath("//*[@id='ng-app']/body/div[12]/div/div/div/div/div[2]/div[4]/div[2]/div"));  
+			  
+              Click_Accept_the_disclaimer.click();
+			  
+			  
+			  WebElement View_Our_Featured_Funds = driver.findElement(By.Xpath("//*[@id='UKHP-FindafundandFeaturedProduct-BB']/div/div[1]/div[3]/a"));  
+			  
+              View_Our_Featured_Funds.click();
+			  
+			  
+			  WebElement Find_out_more = driver.findElement(By.Xpath("//*[@id='1383537148456']/div/div[1]/div/div[1]/div[2]/div[2]/span/div/span/a/span"));  
+			  
+              Find_out_more.click();			  
+
+
+              WebElement search = driver.findElement(By.Xpath("//*[@id='jump-to-fund-placehoder']"));
+
+              search.clear();
+
+              search.sendKeys("GB0009698001");
+			  
+
+              WebElement Fund = driver.findElement(By.Xpath("//*[@id='suggestionitem']/a/div/div[1]/div[1]/span"));  
+			  
+              Click_Fund.click();     
+			  
+			  WebElement validate_ISIN = driver.findElement(By.Text("GB0009698001");
+			  
+
+
+			  WebElement Click_Performance_and_fees = driver.findElement(By.Xpath("//*[@id='react-app']/div/div[2]/div[1]/div[2]/div/span"));  
+			  
+              Click_Performance_and_fees(); 
+              WebElement validate_ISIN = driver.findElement(By.Xpath("//*[@id='PerformanceChart']/svg/g/g[3]/rect");			  
+
+
+              driver.close();
+
+              System.out.println("Test script executed successfully.");
+
+              System.exit(0);
+       }
+
+}
